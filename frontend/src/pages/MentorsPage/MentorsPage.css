@@ -1,0 +1,152 @@
+/* ===== Global Reset & Page Layout ===== */
+
+.mentors-page {
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+/* ===== Header ===== */
+
+.mentors-page__header {
+  background: linear-gradient(135deg, #312e81, #4f46e5, #6366f1);
+  padding: 48px 24px;
+  color: #fff;
+}
+
+.mentors-page__header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mentors-page__title {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.mentors-page__description {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.85;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ===== Content Layout ===== */
+
+.mentors-page__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .mentors-page__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Results Section ===== */
+
+.mentors-page__results-header {
+  margin-bottom: 20px;
+}
+
+.mentors-page__results-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mentors-page__count {
+  font-weight: 400;
+  color: #94a3b8;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+/* ===== Mentor Grid ===== */
+
+.mentors-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ===== Loading State ===== */
+
+.mentors-page__loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+
+.mentors-page__spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Error State ===== */
+
+.mentors-page__error {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #dc2626;
+}
+
+.mentors-page__error button {
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: 1.5px solid #dc2626;
+  border-radius: 8px;
+  background: #fff;
+  color: #dc2626;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mentors-page__error button:hover {
+  background: #fef2f2;
+}
+
+/* ===== Empty State ===== */
+
+.mentors-page__empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+
+.mentors-page__empty button {
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: 1.5px solid #6366f1;
+  border-radius: 8px;
+  background: #fff;
+  color: #6366f1;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mentors-page__empty button:hover {
+  background: #eef2ff;
+}
